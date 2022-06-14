@@ -22,4 +22,14 @@ const makeId = function () {
   return id;
 };
 
-export {getRandomArrayElement, getRandomPositiveInteger, makeId, checkLengthString}
+//функция для проверки нажатия клавиши Escape
+const isEscapeEvent = (evt) => {
+  return evt.key === 'Escape' || evt.key === 'Esc'
+};
+
+const setBodyFixed = () => {
+  const body = document.querySelector('body');
+  body.classList.add('modal-open');
+};
+
+export {getRandomArrayElement, getRandomPositiveInteger, makeId, checkLengthString, isEscapeEvent, setBodyFixed}
