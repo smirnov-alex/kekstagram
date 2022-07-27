@@ -13,7 +13,7 @@ const checkLengthString = (checkedString, maxLength) => checkedString.length <= 
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
 //функция для создания случайного id комментария
-const makeId = function () {
+const makeId = () => {
   let id = '';
   const possibleSymbol = '0123456789';
   for (let i = 0; i < 5; i++) {
@@ -27,6 +27,7 @@ const isEscapeEvent = (evt) => {
   return evt.key === 'Escape' || evt.key === 'Esc'
 };
 
+//добавление класса для фиксации основного окна при открытой модалке
 const setBodyFixed = () => {
   const body = document.querySelector('body');
   body.classList.add('modal-open');

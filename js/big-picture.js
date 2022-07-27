@@ -10,7 +10,7 @@ const onPopupEscKeydown = (evt) => {
   }
 };
 
-function closeBigPicture () {
+const closeBigPicture = () => {
   bigPicture.classList.add('hidden');
   body.classList.remove('modal-open');
   document.removeEventListener('keydown', onPopupEscKeydown);
